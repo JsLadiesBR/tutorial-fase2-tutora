@@ -1,0 +1,28 @@
+{
+  "name": "game-js-ladies",
+  "version": "1.0.0",
+  "description": "Tutorial para o JSLadies",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "game",
+    "js",
+    "jsladies",
+    "phaser.io",
+    "multiplayer",
+    "mmorpg",
+    "javascript",
+    "sailor",
+    "moon",
+    "magic",
+    "girls"
+  ],
+  "author": "Ju Dantas",
+  "license": "ISC",
+  "dependencies": {
+    "phaser": "^2.6.2"
+  },
+  "devDependencies": {}
+}
