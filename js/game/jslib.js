@@ -35,7 +35,7 @@ const criarJogadora = function (x, y, nomeImagem) {
 
 const adicionarAnimacao = function(jogadora){
 	jogadora.animations.add('down', Phaser.Animation.generateFrameNames('sprite',1,3),10, true)
-	//jogadora.animations.play('down')
+	return jogadora
 }
 
 const cameraSeguir = function (jogadora) {
@@ -49,14 +49,26 @@ const criarMapa = function() {
 	layer.resizeWorld()
 }
 
-const moverJogadora = function (jogadora) {
-	if (jogo.input.keyboard.isDown(Phaser.Keyboard.UP)) {
-		jogadora.y -= 5
-	} else if (jogo.input.keyboard.isDown(Phaser.Keyboard.DOWN)) {
-		jogadora.y += 5
-	} else if (jogo.input.keyboard.isDown(Phaser.Keyboard.LEFT)) {
-		jogadora.x -= 5
-	} else if (jogo.input.keyboard.isDown(Phaser.Keyboard.RIGHT)) {
-		jogadora.x += 5
-	}
+const moverJogadora = function (mover) {
+	mover()
+}
+
+function cima () {
+	return jogo.input.keyboard.isDown(Phaser.Keyboard.UP)
+}
+
+function baixo () {
+	return jogo.input.keyboard.isDown(Phaser.Keyboard.DOWN)
+}
+
+function esquerda () {
+	return jogo.input.keyboard.isDown(Phaser.Keyboard.LEFT)
+}
+
+function direita () {
+	return jogo.input.keyboard.isDown(Phaser.Keyboard.RIGHT)
+}
+
+function iniciarAnimacao ( jogadora, direcao ) {
+	jogadora.animations.play(direcao)
 }
